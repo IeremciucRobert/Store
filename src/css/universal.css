@@ -1,0 +1,151 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageSection {
+  flex: 1;
+  margin-top: 68px;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  .pageSection {
+    margin-top: 66px;
+  }
+}
+
+.universalMarginBottom45px {
+  margin-bottom: 45px;
+}
+
+.titleWithOrangeLine {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 110px;
+  line-height: 110px;
+  margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .titleWithOrangeLine {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+.titleWithOrangeLine:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #ff7f00;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.boxContainerShadow {
+  box-shadow: 0 0 6px black;
+  margin-bottom: 15px;
+  padding: 25px 35px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .boxContainerShadow {
+    padding: 20px 20px;
+  }
+}
+
+.boxInnerLine {
+  border-bottom: 1px solid #ff7f00;
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.boxWordBold {
+  font-weight: bold;
+}
+
+.boxRightAlignedElement {
+  margin-left: auto;
+  color: #ff7f00 !important;
+  text-decoration: underline !important;
+}
+
+.boxTextOrange {
+  color: #ff7f00;
+}
+
+.removeInputDefaults {
+  border: none;
+  padding: 0 10px;
+}
+
+.removeInputDefaults:focus {
+  outline: none;
+}
+
+.menuTabButtonsWrap {
+  display: flex;
+  margin-bottom: 15px;
+}
+.menuTabButtonsWrap .menuTabBGOrange {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.menuTabButtonsWrap > button {
+  padding: 10px 35px;
+  border: none;
+  border-radius: 0;
+  margin-right: 15px;
+  font-weight: bold;
+  box-shadow: 0 0 6px black;
+}
+
+.menuTabButtonsWrap > button:hover,
+.menuTabButtonsWrap > button:focus {
+  border: none;
+  outline: none;
+}
+
+.menuTabMiniMenuWrap {
+  box-shadow: 0 0 6px black;
+  margin-bottom: 15px;
+}
+
+.menuTabMiniMenuInnerWrap {
+  padding: 10px 0;
+}
+.menuTabMiniMenuInnerWrap div:last-child {
+  border-bottom: none;
+}
+
+.menuTabMiniMenuDetail {
+  padding: 10px 0;
+}
+
+.menuTabMiniMenuDetailTitle {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.buttonOrangeWhite {
+  color: white;
+  background-color: #ff7f00;
+}
+
+.buttonRemoveDefaults {
+  border: none;
+}
+
+.buttonRemoveDefaults:focus {
+  outline: none;
+  border: none;
+}

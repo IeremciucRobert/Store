@@ -1,0 +1,449 @@
+$orangeTheme: #ff7f00;
+$whiteTextTheme: white;
+$mainImageDarkOverlay: rgba(0, 0, 0, 0.6);
+$cardShadowColor: black;
+$cardDetailsArrowColor: white;
+$grayBGColor: #e5e5e5;
+$blackText: black;
+
+@mixin below575px {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin above575px {
+  @media (min-width: 575px) {
+    @content;
+  }
+}
+
+@mixin below767px {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin below1075px {
+  @media (max-width: 1075px) {
+    @content;
+  }
+}
+
+.pageSectionHome {
+  a {
+    color: $whiteTextTheme;
+  }
+}
+
+.pageSection a:hover {
+  text-decoration: none;
+}
+
+.mainImageWrapper {
+  background-image: url("../Images/home1.jpg");
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include below767px() {
+    height: 390px;
+    padding-bottom: 0;
+    background-size: cover;
+  }
+
+  .mainTextWrapper {
+    width: 49%;
+    background-color: $mainImageDarkOverlay;
+    position: absolute;
+    height: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: $whiteTextTheme;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4% 0 10%;
+    @include below1075px() {
+      padding-left: 5%;
+      padding-right: 8%;
+      width: 59%;
+    }
+    @include below767px() {
+      width: 75%;
+    }
+    @include below575px() {
+      width: 89%;
+      padding-right: 15%;
+    }
+
+    > h3 {
+      @include below767px() {
+        font-size: 1.2rem;
+      }
+    }
+
+    .mainNormalText {
+      margin: 5% 0 11% 0;
+      @include below767px() {
+        font-size: 0.95rem;
+      }
+    }
+
+    .mainViewButton {
+      width: fit-content;
+      padding: 10px 30px;
+      background-color: $orangeTheme;
+      border: none;
+    }
+  }
+}
+
+.categoriesWrapper {
+  @include below575px() {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .row {
+    @include below575px() {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  @include below575px() {
+    height: 90px;
+    line-height: 90px;
+  }
+}
+
+.title:before,
+.title:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid $orangeTheme;
+  margin: auto;
+}
+
+.title:before {
+  margin-right: 10px;
+}
+
+.title:after {
+  margin-left: 10px;
+}
+
+.ourOffers {
+  padding-bottom: 45px;
+  margin-top: 30px;
+  background-color: $orangeTheme;
+  @include below575px() {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+
+  > .container {
+    @include below575px() {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.ourOffersContainer > h4:before {
+  border-color: $whiteTextTheme;
+}
+
+.ourOffersContainer > h4 {
+  color: $whiteTextTheme;
+}
+
+.ourOffersContainer > h4:before,
+.ourOffersContainer > h4:after {
+  border-color: $whiteTextTheme;
+}
+
+.categoriesMarginTop {
+  margin-top: -22px;
+}
+
+.homeCardWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin-left: 0;
+  margin-right: 0;
+
+  > :first-child,
+  > :nth-child(2) {
+    @include below767px() {
+      margin-bottom: 20px;
+    }
+    @include below575px() {
+      margin-bottom: 15px;
+    }
+  }
+
+  .homeCard {
+    width: calc(25% - 10px);
+    background-color: $whiteTextTheme;
+    box-shadow: 0 0 6px $cardShadowColor;
+    display: flex;
+    flex-direction: column;
+    @include below767px() {
+      width: calc(50% - 10px);
+    }
+    @include below575px() {
+      width: calc(50% - 7.5px);
+    }
+
+    .homeCardImage {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+
+      .homeCardFavorites {
+        right: 0;
+        position: absolute;
+        cursor: pointer;
+        width: 12%;
+      }
+    }
+
+    .homeCardName {
+      margin: 0;
+      border-top: 1px solid $orangeTheme;
+      padding: 12px 0;
+      text-align: center;
+      flex: 1;
+    }
+
+    .homeCardPrice {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+
+      .homeCardPriceDollar {
+        color: $orangeTheme;
+        font-weight: bold;
+      }
+    }
+
+    .homeCardButtonWrap {
+      width: 100%;
+      display: flex;
+      padding: 0;
+      border: none;
+
+      .homeCardButton {
+        width: 85%;
+        border: none;
+        background-color: $orangeTheme;
+        padding: 10px 0;
+        flex: 1;
+        text-align: center;
+      }
+
+      .homeCardButtonArrowWrap {
+        width: 44px;
+        height: 44px;
+        background-color: orange;
+        display: inline-block;
+        padding: 10px 0;
+        position: relative;
+
+        .homeCardButtonArrow {
+          height: 18px;
+          width: 18px;
+          border-top: 2px solid $cardDetailsArrowColor;
+          border-right: 2px solid $cardDetailsArrowColor;
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          left: 4px;
+          transform: translateY(-50%) rotate(45deg);
+        }
+
+        .homeCardButtonArrow:after {
+          content: "";
+          height: 18px;
+          width: 18px;
+          border-top: 2px solid $cardDetailsArrowColor;
+          border-right: 2px solid $cardDetailsArrowColor;
+          position: absolute;
+          top: -9px;
+          right: -9px;
+        }
+      }
+    }
+  }
+
+  .viewProductsCategorie {
+    margin: 30px auto 0 auto;
+    padding: 10px 35px;
+    border: 2px solid $orangeTheme;
+    color: $orangeTheme;
+    background-color: rgba(0, 0, 0, 0);
+    @include below575px() {
+      margin-top: 15px;
+    }
+  }
+
+  .viewOurOffers {
+    color: $whiteTextTheme;
+    border-color: $whiteTextTheme;
+  }
+}
+
+.secondImagesWrapper {
+  display: flex;
+  width: 100%;
+  height: 0;
+  padding-bottom: 22%;
+  position: relative;
+  overflow: hidden;
+  @include below575px() {
+    height: fit-content;
+    padding-bottom: 0;
+    flex-direction: column;
+  }
+
+  > div:first-child {
+    transform: skew(12deg);
+    width: 40%;
+    margin-left: -7%;
+    overflow: hidden;
+  }
+
+  > div:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%) skew(12deg);
+    overflow: hidden;
+  }
+
+  > div:nth-child(3) {
+    right: 0;
+    transform: skew(12deg);
+    margin-right: -4%;
+    width: 37%;
+    overflow: hidden;
+  }
+
+  > div:first-child div {
+    background: url("../Images/home2.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skew(-12deg);
+    background-repeat: no-repeat;
+    width: 89%;
+    right: -17%;
+  }
+
+  > div:nth-child(2) div {
+    background: url("../Images/home3.jpg");
+    background-size: cover;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%) skew(-12deg);
+    width: 117%;
+  }
+
+  > div:nth-child(3) div {
+    background: url("../Images/home1.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: skew(-12deg);
+    width: 96%;
+    background-repeat: no-repeat;
+    left: -6.5%;
+  }
+
+  .secondImageWrap {
+    width: 32.6%;
+    height: 100%;
+    position: absolute;
+    @include below575px() {
+      display: none;
+    }
+
+    .secondImage {
+      text-align: center;
+      position: relative;
+      height: 100%;
+    }
+  }
+
+  .secondImageMobileWrap {
+    padding-bottom: 43%;
+    width: 100%;
+    height: 0;
+    position: relative;
+    margin-bottom: 60px;
+    @include above575px() {
+      display: none;
+      padding-bottom: 43%;
+      width: 100%;
+    }
+
+    .secondImageMobile {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .secondImageMobileTitle {
+      bottom: -22px;
+      position: absolute;
+      background-color: $orangeTheme;
+      padding: 10px 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+  }
+
+  .secondImageMobileWrap:last-child {
+    margin-bottom: 44px;
+  }
+}
+
+.secondImageTagWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2.7%;
+  position: relative;
+  top: -22px;
+  @include below575px() {
+    display: none;
+  }
+
+  .secondImageTag {
+    padding: 10px 0;
+    white-space: nowrap;
+    background-color: $orangeTheme;
+  }
+}

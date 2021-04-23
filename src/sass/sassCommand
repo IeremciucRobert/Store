@@ -1,0 +1,12 @@
+sass --watch --no-source-map src/sass/universal.scss src/css/universal.css
+sass --watch --no-source-map src/sass/header-nav.scss src/css/header-nav.css
+sass --watch --no-source-map src/sass/home.scss src/css/home.css
+sass --watch --no-source-map src/sass/products.scss src/css/products.css
+sass --watch --no-source-map src/sass/favorites.scss src/css/favorites.css
+sass --watch --no-source-map src/sass/cart.scss src/css/cart.css
+sass --watch --no-source-map src/sass/checkout.scss src/css/checkout.css
+sass --watch --no-source-map src/sass/user.scss src/css/user.css
+sass --watch --no-source-map src/sass/singleProduct.scss src/css/singleProduct.css
+sass --watch --no-source-map src/sass/login.scss src/css/login.css
+sass --watch --no-source-map src/sass/register.scss src/css/register.css
+sass --watch --no-source-map src/sass/footer.scss src/css/footer.css

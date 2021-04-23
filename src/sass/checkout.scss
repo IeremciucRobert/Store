@@ -1,0 +1,245 @@
+$orangeTheme: #ff7f00;
+$whiteTextTheme: white;
+$whiteBGTheme: white;
+$mainImageDarkOverlay: rgba(0, 0, 0, 0.6);
+$cardShadowColor: black;
+$cardDetailsArrowColor: white;
+$buttonBGTransparent: rgba(0, 0, 0, 0);
+$productAddCartButton: #ff5500;
+
+@mixin below530px() {
+  @media (max-width: 530px) {
+    @content;
+  }
+}
+
+@mixin below767px {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+.checkoutAccountEditInput {
+  margin-left: 20px;
+  border: none;
+  @include below530px() {
+    margin-left: 10px;
+  }
+}
+
+.cardNumberInput {
+  width: 400px;
+}
+
+.expiringCVVWrap {
+  display: flex;
+  flex-direction: row;
+  max-width: 519px;
+
+  .expiringDateWrap {
+    display: flex;
+    @include below767px() {
+      flex-direction: column;
+    }
+
+    .expiringDate {
+      width: 35%;
+      flex: 1;
+      margin-right: 15px;
+      @include below767px() {
+        margin-right: 0;
+      }
+    }
+
+    .cvvWrap {
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      @include below767px() {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      input {
+        @include below767px() {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+
+// ------ finish order box ------
+
+.checkoutSaveCardDetWrap {
+  border-top: 1px solid $orangeTheme;
+  margin-top: 15px;
+}
+
+.checkoutDeliveryAddAddress {
+  color: $orangeTheme;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkoutPriceWrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include below530px() {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.checkoutPriceWrapRight {
+  align-items: flex-end;
+  @include below530px() {
+    margin-top: 15px;
+  }
+}
+
+.checkoutPrices {
+  font-weight: bold;
+  color: $orangeTheme;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin-bottom: 18px;
+}
+
+.checkoutContinueWrap {
+  padding: 0;
+  border: none;
+  background-color: $orangeTheme;
+  color: $whiteTextTheme;
+  @include below530px() {
+    display: flex;
+    width: 100%;
+  }
+
+  .checkoutContinueText {
+    padding: 0 35px;
+    @include below530px() {
+      flex: 1;
+      align-self: center;
+    }
+  }
+
+  .cartContinueButtonArrowWrap {
+    width: 44px;
+    height: 44px;
+    background-color: $productAddCartButton;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+
+    .cartContinueButtonArrow {
+      height: 18px;
+      width: 18px;
+      border-top: 2px solid $cardDetailsArrowColor;
+      border-right: 2px solid $cardDetailsArrowColor;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .cartContinueButtonArrow:after {
+      content: "";
+      height: 18px;
+      width: 18px;
+      border-top: 2px solid $cardDetailsArrowColor;
+      border-right: 2px solid $cardDetailsArrowColor;
+      position: absolute;
+      top: -9px;
+      right: -9px;
+    }
+  }
+}
+
+.checkoutContinueWrap:focus {
+  border: none;
+  outline: none;
+}
+
+.menuTabButtonsWrap {
+  @include below767px() {
+    justify-content: center;
+  }
+}
+
+.menuTabMiniMenuDetail {
+  @include below767px() {
+    display: flex;
+  }
+}
+
+.cardNumberInput {
+  @include below767px() {
+    flex: 1;
+    width: initial;
+  }
+}
+
+.expiringDateWrap {
+  @include below767px() {
+    flex: 1;
+    width: initial;
+  }
+}
+
+.checkoutDeliveryMobile {
+  @include below767px() {
+    flex-direction: column;
+  }
+  span {
+    @include below767px() {
+      margin-right: auto;
+    }
+  }
+
+  .checkoutDeliveryMobileInWrap {
+    @include below767px() {
+      margin-right: auto;
+      margin-bottom: 15px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    > input:last-child {
+      @include below767px() {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.checkoutFinishWrapper {
+  @include below530px() {
+    flex-direction: column;
+  }
+}
+
+.checkoutTotalCostTextMobile {
+  @include below530px() {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.checkoutYourOrderTextMobile {
+  @include below530px() {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}

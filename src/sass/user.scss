@@ -1,0 +1,290 @@
+$orangeTheme: #ff7f00;
+$whiteTextTheme: white;
+$whiteBGTheme: white;
+$mainImageDarkOverlay: rgba(0, 0, 0, 0.6);
+$cardShadowColor: black;
+$cardDetailsArrowColor: white;
+$buttonBGTransparent: rgba(0, 0, 0, 0);
+$productAddCartButton: red;
+$disabledSaveButton: rgb(168, 168, 168);
+
+@mixin below767px {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin below575px {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin below540px {
+  @media (max-width: 540px) {
+    @content;
+  }
+}
+
+.userWrapper {
+  .userSubPageButtonWrap {
+    margin-bottom: 15px;
+    @include below575px() {
+      text-align: center;
+    }
+
+    button {
+      border: none;
+      padding: 10px 40px;
+      margin-right: 20px;
+      box-shadow: 0 0 6px $cardShadowColor;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button:last-child {
+      @include below575px() {
+        margin: 0;
+        display: block;
+        margin: auto;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .userOrderWrapper {
+    box-shadow: 0 0 6px $cardShadowColor;
+    margin-bottom: 15px;
+    padding: 25px 35px;
+    position: relative;
+
+    .userOrderDetail {
+      border-bottom: 1px solid $orangeTheme;
+      margin: 0;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+
+      .userOrderTitle {
+        font-weight: bold;
+        margin-right: 20px;
+        white-space: nowrap;
+      }
+
+      .userOrderPWInputWrap {
+        width: fit-content;
+        display: flex;
+        @include below575px() {
+          width: 100%;
+          display: flex;
+        }
+
+        .userOrderPWInput {
+          padding: 0px 10px;
+          border: none;
+          width: initial !important;
+          max-width: 170px;
+          @include below575px() {
+            flex: 1;
+          }
+        }
+
+        > :focus {
+          outline: none;
+          border: none;
+        }
+
+        .userOrderPWVisibility {
+          color: black;
+          background-color: $whiteTextTheme;
+          padding: 0 10px;
+        }
+      }
+
+      > :focus {
+        outline: none;
+        border: none;
+      }
+    }
+
+    > p:last-child {
+      border-bottom: none;
+    }
+
+    .userOrderDetailStatus {
+      @include below575px() {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .userOrderTextMargin {
+      margin-left: 20px;
+    }
+
+    .userOrderDetailColor {
+      font-weight: bold;
+      color: $orangeTheme;
+    }
+
+    .userOrderDetailButton {
+      color: $orangeTheme;
+      float: right;
+      text-decoration: underline;
+      position: absolute;
+      right: 35px;
+      @include below575px() {
+        position: initial;
+        padding-top: 15px;
+        margin-top: 16px;
+        border-top: 1px solid $orangeTheme;
+        width: 100%;
+      }
+    }
+
+    .userOrderInputRemovers {
+      border: none;
+      outline: none;
+      padding: 0 10px;
+      @include below575px() {
+        width: 100%;
+      }
+    }
+
+    .userOrderInputRemovers:focus {
+      outline: none;
+    }
+  }
+
+  .userOrderPasswordWrap {
+    // @include below540px() {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
+
+    .userOrderPasswordInnerWrap {
+      display: flex;
+      @include below540px() {
+        display: block;
+      }
+
+      .userOrderPWInputWrap {
+        display: flex;
+        @include below540px() {
+          margin-top: 7px;
+        }
+
+        .userOrderPWInput {
+          @include below540px() {
+            padding-left: 0 !important;
+            flex: 1;
+            max-width: initial;
+            width: inherit !important;
+          }
+        }
+      }
+    }
+  }
+
+  .userOrderSaveButton {
+    padding: 10px 60px;
+    border: none;
+    margin-top: 30px;
+  }
+
+  .userOrderSaveButton:focus {
+    outline: none;
+    border: none;
+  }
+
+  .userOrderSaveButtonActive {
+    background-color: $orangeTheme;
+    color: $whiteTextTheme;
+  }
+
+  .userOrderSaveButtonDisabled {
+    background-color: $disabledSaveButton;
+    color: $whiteTextTheme;
+  }
+}
+
+.userDataContainer {
+  position: relative;
+  margin: 55px 0;
+  padding: 35px;
+  box-shadow: 0 0 6px $cardShadowColor;
+  @include below575px() {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  .userImageContainer {
+    @include below767px() {
+      padding: 0;
+    }
+    @include below575px() {
+      max-width: 227px;
+      margin: auto;
+    }
+
+    .userImageWrapper {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      position: relative;
+
+      .userImage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .userTextData {
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include below575px() {
+      padding: 0;
+    }
+
+    .userSpreadBorder {
+      border: 1px solid $orangeTheme;
+      margin: 15px 0;
+      width: 100%;
+      display: inline-block;
+    }
+
+    .userOrangeText {
+      color: $orangeTheme;
+    }
+  }
+}
+
+.userEditWrapper {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.userEditWrapper:focus {
+  outline: none;
+  border: none;
+}
+
+// button on click background
+
+.buttonBGColor {
+  background-color: $orangeTheme;
+  color: $whiteTextTheme;
+}

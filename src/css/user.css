@@ -1,0 +1,240 @@
+.userWrapper .userSubPageButtonWrap {
+  margin-bottom: 15px;
+}
+@media (max-width: 575px) {
+  .userWrapper .userSubPageButtonWrap {
+    text-align: center;
+  }
+}
+.userWrapper .userSubPageButtonWrap button {
+  border: none;
+  padding: 10px 40px;
+  margin-right: 20px;
+  box-shadow: 0 0 6px black;
+}
+.userWrapper .userSubPageButtonWrap button:focus {
+  outline: none;
+}
+@media (max-width: 575px) {
+  .userWrapper .userSubPageButtonWrap button:last-child {
+    margin: 0;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+  }
+}
+.userWrapper .userOrderWrapper {
+  box-shadow: 0 0 6px black;
+  margin-bottom: 15px;
+  padding: 25px 35px;
+  position: relative;
+}
+.userWrapper .userOrderWrapper .userOrderDetail {
+  border-bottom: 1px solid #ff7f00;
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.userWrapper .userOrderWrapper .userOrderDetail .userOrderTitle {
+  font-weight: bold;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+.userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap {
+  width: fit-content;
+  display: flex;
+}
+@media (max-width: 575px) {
+  .userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap {
+    width: 100%;
+    display: flex;
+  }
+}
+.userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap .userOrderPWInput {
+  padding: 0px 10px;
+  border: none;
+  width: initial !important;
+  max-width: 170px;
+}
+@media (max-width: 575px) {
+  .userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap .userOrderPWInput {
+    flex: 1;
+  }
+}
+.userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap > :focus {
+  outline: none;
+  border: none;
+}
+.userWrapper .userOrderWrapper .userOrderDetail .userOrderPWInputWrap .userOrderPWVisibility {
+  color: black;
+  background-color: white;
+  padding: 0 10px;
+}
+.userWrapper .userOrderWrapper .userOrderDetail > :focus {
+  outline: none;
+  border: none;
+}
+.userWrapper .userOrderWrapper > p:last-child {
+  border-bottom: none;
+}
+@media (max-width: 575px) {
+  .userWrapper .userOrderWrapper .userOrderDetailStatus {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.userWrapper .userOrderWrapper .userOrderTextMargin {
+  margin-left: 20px;
+}
+.userWrapper .userOrderWrapper .userOrderDetailColor {
+  font-weight: bold;
+  color: #ff7f00;
+}
+.userWrapper .userOrderWrapper .userOrderDetailButton {
+  color: #ff7f00;
+  float: right;
+  text-decoration: underline;
+  position: absolute;
+  right: 35px;
+}
+@media (max-width: 575px) {
+  .userWrapper .userOrderWrapper .userOrderDetailButton {
+    position: initial;
+    padding-top: 15px;
+    margin-top: 16px;
+    border-top: 1px solid #ff7f00;
+    width: 100%;
+  }
+}
+.userWrapper .userOrderWrapper .userOrderInputRemovers {
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+@media (max-width: 575px) {
+  .userWrapper .userOrderWrapper .userOrderInputRemovers {
+    width: 100%;
+  }
+}
+.userWrapper .userOrderWrapper .userOrderInputRemovers:focus {
+  outline: none;
+}
+.userWrapper .userOrderPasswordWrap .userOrderPasswordInnerWrap {
+  display: flex;
+}
+@media (max-width: 540px) {
+  .userWrapper .userOrderPasswordWrap .userOrderPasswordInnerWrap {
+    display: block;
+  }
+}
+.userWrapper .userOrderPasswordWrap .userOrderPasswordInnerWrap .userOrderPWInputWrap {
+  display: flex;
+}
+@media (max-width: 540px) {
+  .userWrapper .userOrderPasswordWrap .userOrderPasswordInnerWrap .userOrderPWInputWrap {
+    margin-top: 7px;
+  }
+}
+@media (max-width: 540px) {
+  .userWrapper .userOrderPasswordWrap .userOrderPasswordInnerWrap .userOrderPWInputWrap .userOrderPWInput {
+    padding-left: 0 !important;
+    flex: 1;
+    max-width: initial;
+    width: inherit !important;
+  }
+}
+.userWrapper .userOrderSaveButton {
+  padding: 10px 60px;
+  border: none;
+  margin-top: 30px;
+}
+.userWrapper .userOrderSaveButton:focus {
+  outline: none;
+  border: none;
+}
+.userWrapper .userOrderSaveButtonActive {
+  background-color: #ff7f00;
+  color: white;
+}
+.userWrapper .userOrderSaveButtonDisabled {
+  background-color: #a8a8a8;
+  color: white;
+}
+
+.userDataContainer {
+  position: relative;
+  margin: 55px 0;
+  padding: 35px;
+  box-shadow: 0 0 6px black;
+}
+@media (max-width: 575px) {
+  .userDataContainer {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .userDataContainer .userImageContainer {
+    padding: 0;
+  }
+}
+@media (max-width: 575px) {
+  .userDataContainer .userImageContainer {
+    max-width: 227px;
+    margin: auto;
+  }
+}
+.userDataContainer .userImageContainer .userImageWrapper {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+.userDataContainer .userImageContainer .userImageWrapper .userImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.userDataContainer .userTextData {
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 575px) {
+  .userDataContainer .userTextData {
+    padding: 0;
+  }
+}
+.userDataContainer .userTextData .userSpreadBorder {
+  border: 1px solid #ff7f00;
+  margin: 15px 0;
+  width: 100%;
+  display: inline-block;
+}
+.userDataContainer .userTextData .userOrangeText {
+  color: #ff7f00;
+}
+
+.userEditWrapper {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.userEditWrapper:focus {
+  outline: none;
+  border: none;
+}
+
+.buttonBGColor {
+  background-color: #ff7f00;
+  color: white;
+}

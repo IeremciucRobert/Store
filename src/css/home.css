@@ -1,0 +1,413 @@
+.pageSectionHome a {
+  color: white;
+}
+
+.pageSection a:hover {
+  text-decoration: none;
+}
+
+.mainImageWrapper {
+  background-image: url("../Images/home1.jpg");
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 767px) {
+  .mainImageWrapper {
+    height: 390px;
+    padding-bottom: 0;
+    background-size: cover;
+  }
+}
+.mainImageWrapper .mainTextWrapper {
+  width: 49%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4% 0 10%;
+}
+@media (max-width: 1075px) {
+  .mainImageWrapper .mainTextWrapper {
+    padding-left: 5%;
+    padding-right: 8%;
+    width: 59%;
+  }
+}
+@media (max-width: 767px) {
+  .mainImageWrapper .mainTextWrapper {
+    width: 75%;
+  }
+}
+@media (max-width: 575px) {
+  .mainImageWrapper .mainTextWrapper {
+    width: 89%;
+    padding-right: 15%;
+  }
+}
+@media (max-width: 767px) {
+  .mainImageWrapper .mainTextWrapper > h3 {
+    font-size: 1.2rem;
+  }
+}
+.mainImageWrapper .mainTextWrapper .mainNormalText {
+  margin: 5% 0 11% 0;
+}
+@media (max-width: 767px) {
+  .mainImageWrapper .mainTextWrapper .mainNormalText {
+    font-size: 0.95rem;
+  }
+}
+.mainImageWrapper .mainTextWrapper .mainViewButton {
+  width: fit-content;
+  padding: 10px 30px;
+  background-color: #ff7f00;
+  border: none;
+}
+
+@media (max-width: 575px) {
+  .categoriesWrapper {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 575px) {
+  .categoriesWrapper .row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 575px) {
+  .title {
+    height: 90px;
+    line-height: 90px;
+  }
+}
+
+.title:before,
+.title:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #ff7f00;
+  margin: auto;
+}
+
+.title:before {
+  margin-right: 10px;
+}
+
+.title:after {
+  margin-left: 10px;
+}
+
+.ourOffers {
+  padding-bottom: 45px;
+  margin-top: 30px;
+  background-color: #ff7f00;
+}
+@media (max-width: 575px) {
+  .ourOffers {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .ourOffers > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ourOffersContainer > h4:before {
+  border-color: white;
+}
+
+.ourOffersContainer > h4 {
+  color: white;
+}
+
+.ourOffersContainer > h4:before,
+.ourOffersContainer > h4:after {
+  border-color: white;
+}
+
+.categoriesMarginTop {
+  margin-top: -22px;
+}
+
+.homeCardWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 767px) {
+  .homeCardWrap > :first-child,
+.homeCardWrap > :nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .homeCardWrap > :first-child,
+.homeCardWrap > :nth-child(2) {
+    margin-bottom: 15px;
+  }
+}
+.homeCardWrap .homeCard {
+  width: calc(25% - 10px);
+  background-color: white;
+  box-shadow: 0 0 6px black;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .homeCardWrap .homeCard {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 575px) {
+  .homeCardWrap .homeCard {
+    width: calc(50% - 7.5px);
+  }
+}
+.homeCardWrap .homeCard .homeCardImage {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.homeCardWrap .homeCard .homeCardImage .homeCardFavorites {
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 12%;
+}
+.homeCardWrap .homeCard .homeCardName {
+  margin: 0;
+  border-top: 1px solid #ff7f00;
+  padding: 12px 0;
+  text-align: center;
+  flex: 1;
+}
+.homeCardWrap .homeCard .homeCardPrice {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+.homeCardWrap .homeCard .homeCardPrice .homeCardPriceDollar {
+  color: #ff7f00;
+  font-weight: bold;
+}
+.homeCardWrap .homeCard .homeCardButtonWrap {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  border: none;
+}
+.homeCardWrap .homeCard .homeCardButtonWrap .homeCardButton {
+  width: 85%;
+  border: none;
+  background-color: #ff7f00;
+  padding: 10px 0;
+  flex: 1;
+  text-align: center;
+}
+.homeCardWrap .homeCard .homeCardButtonWrap .homeCardButtonArrowWrap {
+  width: 44px;
+  height: 44px;
+  background-color: orange;
+  display: inline-block;
+  padding: 10px 0;
+  position: relative;
+}
+.homeCardWrap .homeCard .homeCardButtonWrap .homeCardButtonArrowWrap .homeCardButtonArrow {
+  height: 18px;
+  width: 18px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.homeCardWrap .homeCard .homeCardButtonWrap .homeCardButtonArrowWrap .homeCardButtonArrow:after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+}
+.homeCardWrap .viewProductsCategorie {
+  margin: 30px auto 0 auto;
+  padding: 10px 35px;
+  border: 2px solid #ff7f00;
+  color: #ff7f00;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 575px) {
+  .homeCardWrap .viewProductsCategorie {
+    margin-top: 15px;
+  }
+}
+.homeCardWrap .viewOurOffers {
+  color: white;
+  border-color: white;
+}
+
+.secondImagesWrapper {
+  display: flex;
+  width: 100%;
+  height: 0;
+  padding-bottom: 22%;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 575px) {
+  .secondImagesWrapper {
+    height: fit-content;
+    padding-bottom: 0;
+    flex-direction: column;
+  }
+}
+.secondImagesWrapper > div:first-child {
+  transform: skew(12deg);
+  width: 40%;
+  margin-left: -7%;
+  overflow: hidden;
+}
+.secondImagesWrapper > div:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%) skew(12deg);
+  overflow: hidden;
+}
+.secondImagesWrapper > div:nth-child(3) {
+  right: 0;
+  transform: skew(12deg);
+  margin-right: -4%;
+  width: 37%;
+  overflow: hidden;
+}
+.secondImagesWrapper > div:first-child div {
+  background: url("../Images/home2.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skew(-12deg);
+  background-repeat: no-repeat;
+  width: 89%;
+  right: -17%;
+}
+.secondImagesWrapper > div:nth-child(2) div {
+  background: url("../Images/home3.jpg");
+  background-size: cover;
+  background-position: center;
+  left: 50%;
+  transform: translateX(-50%) skew(-12deg);
+  width: 117%;
+}
+.secondImagesWrapper > div:nth-child(3) div {
+  background: url("../Images/home1.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: skew(-12deg);
+  width: 96%;
+  background-repeat: no-repeat;
+  left: -6.5%;
+}
+.secondImagesWrapper .secondImageWrap {
+  width: 32.6%;
+  height: 100%;
+  position: absolute;
+}
+@media (max-width: 575px) {
+  .secondImagesWrapper .secondImageWrap {
+    display: none;
+  }
+}
+.secondImagesWrapper .secondImageWrap .secondImage {
+  text-align: center;
+  position: relative;
+  height: 100%;
+}
+.secondImagesWrapper .secondImageMobileWrap {
+  padding-bottom: 43%;
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin-bottom: 60px;
+}
+@media (min-width: 575px) {
+  .secondImagesWrapper .secondImageMobileWrap {
+    display: none;
+    padding-bottom: 43%;
+    width: 100%;
+  }
+}
+.secondImagesWrapper .secondImageMobileWrap .secondImageMobile {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.secondImagesWrapper .secondImageMobileWrap .secondImageMobileTitle {
+  bottom: -22px;
+  position: absolute;
+  background-color: #ff7f00;
+  padding: 10px 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.secondImagesWrapper .secondImageMobileWrap:last-child {
+  margin-bottom: 44px;
+}
+
+.secondImageTagWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 2.7%;
+  position: relative;
+  top: -22px;
+}
+@media (max-width: 575px) {
+  .secondImageTagWrap {
+    display: none;
+  }
+}
+.secondImageTagWrap .secondImageTag {
+  padding: 10px 0;
+  white-space: nowrap;
+  background-color: #ff7f00;
+}

@@ -1,0 +1,176 @@
+$whiteBGColor: white;
+$orangeTheme: #ff7f00;
+$whiteTextTheme: white;
+$whiteBGTheme: white;
+$mainImageDarkOverlay: rgba(0, 0, 0, 0.6);
+$cardShadowColor: black;
+$cardDetailsArrowColor: white;
+$buttonBGTransparent: rgba(0, 0, 0, 0);
+$productAddCartButton: #ff5500;
+
+@mixin below767px {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+body {
+  background-color: $whiteBGColor;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.pageSection {
+  flex: 1;
+  margin-top: 68px;
+  background-color: $whiteBGColor;
+  @include below767px() {
+    margin-top: 66px;
+  }
+}
+
+.universalMarginBottom45px {
+  margin-bottom: 45px;
+}
+
+// ------ orange line after title ------
+
+.titleWithOrangeLine {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 110px;
+  line-height: 110px;
+  margin-bottom: 0;
+  @include below767px() {
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+.titleWithOrangeLine:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid $orangeTheme;
+  margin: auto;
+  margin-left: 10px;
+}
+
+// ------ box for details with orange line between ------
+
+.boxContainerShadow {
+  box-shadow: 0 0 6px $cardShadowColor;
+  margin-bottom: 15px;
+  padding: 25px 35px;
+  position: relative;
+
+  @include below767px() {
+    padding: 20px 20px;
+  }
+}
+
+.boxInnerLine {
+  border-bottom: 1px solid $orangeTheme;
+  margin: 0;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.boxWordBold {
+  font-weight: bold;
+}
+
+.boxRightAlignedElement {
+  margin-left: auto;
+  color: $orangeTheme !important;
+  text-decoration: underline !important;
+}
+
+// ------ text oragen ------
+
+.boxTextOrange {
+  color: $orangeTheme;
+}
+
+// ------ remove input defaults ------
+
+.removeInputDefaults {
+  border: none;
+  padding: 0 10px;
+}
+
+.removeInputDefaults:focus {
+  outline: none;
+}
+
+// ------ mini menu with tabs ------
+
+.menuTabButtonsWrap {
+  display: flex;
+  margin-bottom: 15px;
+
+  .menuTabBGOrange {
+    background-color: $orangeTheme;
+    color: $whiteTextTheme;
+  }
+}
+
+.menuTabButtonsWrap > button {
+  padding: 10px 35px;
+  border: none;
+  border-radius: 0;
+  margin-right: 15px;
+  font-weight: bold;
+  box-shadow: 0 0 6px $cardShadowColor;
+}
+
+.menuTabButtonsWrap > button:hover,
+.menuTabButtonsWrap > button:focus {
+  border: none;
+  outline: none;
+}
+
+.menuTabMiniMenuWrap {
+  box-shadow: 0 0 6px $cardShadowColor;
+  margin-bottom: 15px;
+}
+
+.menuTabMiniMenuInnerWrap {
+  padding: 10px 0;
+
+  div:last-child {
+    border-bottom: none;
+  }
+}
+
+.menuTabMiniMenuDetail {
+  padding: 10px 0;
+}
+
+.menuTabMiniMenuDetailTitle {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+// -------- button orange white color and remove defaults --------
+
+.buttonOrangeWhite {
+  color: $whiteTextTheme;
+  background-color: $orangeTheme;
+}
+
+.buttonRemoveDefaults {
+  border: none;
+}
+
+.buttonRemoveDefaults:focus {
+  outline: none;
+  border: none;
+}

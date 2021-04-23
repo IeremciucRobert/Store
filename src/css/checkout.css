@@ -1,0 +1,228 @@
+.checkoutAccountEditInput {
+  margin-left: 20px;
+  border: none;
+}
+@media (max-width: 530px) {
+  .checkoutAccountEditInput {
+    margin-left: 10px;
+  }
+}
+
+.cardNumberInput {
+  width: 400px;
+}
+
+.expiringCVVWrap {
+  display: flex;
+  flex-direction: row;
+  max-width: 519px;
+}
+.expiringCVVWrap .expiringDateWrap {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .expiringCVVWrap .expiringDateWrap {
+    flex-direction: column;
+  }
+}
+.expiringCVVWrap .expiringDateWrap .expiringDate {
+  width: 35%;
+  flex: 1;
+  margin-right: 15px;
+}
+@media (max-width: 767px) {
+  .expiringCVVWrap .expiringDateWrap .expiringDate {
+    margin-right: 0;
+  }
+}
+.expiringCVVWrap .expiringDateWrap .cvvWrap {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .expiringCVVWrap .expiringDateWrap .cvvWrap {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .expiringCVVWrap .expiringDateWrap .cvvWrap input {
+    flex: 1;
+  }
+}
+
+.checkoutSaveCardDetWrap {
+  border-top: 1px solid #ff7f00;
+  margin-top: 15px;
+}
+
+.checkoutDeliveryAddAddress {
+  color: #ff7f00;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.checkoutPriceWrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 530px) {
+  .checkoutPriceWrap {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.checkoutPriceWrapRight {
+  align-items: flex-end;
+}
+@media (max-width: 530px) {
+  .checkoutPriceWrapRight {
+    margin-top: 15px;
+  }
+}
+
+.checkoutPrices {
+  font-weight: bold;
+  color: #ff7f00;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+h5 {
+  margin-bottom: 18px;
+}
+
+.checkoutContinueWrap {
+  padding: 0;
+  border: none;
+  background-color: #ff7f00;
+  color: white;
+}
+@media (max-width: 530px) {
+  .checkoutContinueWrap {
+    display: flex;
+    width: 100%;
+  }
+}
+.checkoutContinueWrap .checkoutContinueText {
+  padding: 0 35px;
+}
+@media (max-width: 530px) {
+  .checkoutContinueWrap .checkoutContinueText {
+    flex: 1;
+    align-self: center;
+  }
+}
+.checkoutContinueWrap .cartContinueButtonArrowWrap {
+  width: 44px;
+  height: 44px;
+  background-color: #ff5500;
+  display: inline-block;
+  padding: 10px 0;
+  position: relative;
+}
+.checkoutContinueWrap .cartContinueButtonArrowWrap .cartContinueButtonArrow {
+  height: 18px;
+  width: 18px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%) rotate(45deg);
+}
+.checkoutContinueWrap .cartContinueButtonArrowWrap .cartContinueButtonArrow:after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+}
+
+.checkoutContinueWrap:focus {
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .menuTabButtonsWrap {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .menuTabMiniMenuDetail {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardNumberInput {
+    flex: 1;
+    width: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .expiringDateWrap {
+    flex: 1;
+    width: initial;
+  }
+}
+
+@media (max-width: 767px) {
+  .checkoutDeliveryMobile {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .checkoutDeliveryMobile span {
+    margin-right: auto;
+  }
+}
+@media (max-width: 767px) {
+  .checkoutDeliveryMobile .checkoutDeliveryMobileInWrap {
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .checkoutDeliveryMobile .checkoutDeliveryMobileInWrap > input:last-child {
+    flex: 1;
+  }
+}
+
+@media (max-width: 530px) {
+  .checkoutFinishWrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 530px) {
+  .checkoutTotalCostTextMobile {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 530px) {
+  .checkoutYourOrderTextMobile {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+}

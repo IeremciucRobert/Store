@@ -1,0 +1,476 @@
+.singleProdTopContainer {
+  margin-bottom: 45px;
+}
+
+.singleProdTitle {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 110px;
+  line-height: 110px;
+  margin-bottom: 0;
+}
+
+.singleProdTitle:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #ff7f00;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.singleProdDetailsContainer {
+  height: 500px;
+  margin-bottom: 55px;
+}
+.singleProdDetailsContainer .singleProdLeftCarousel {
+  height: 100%;
+  margin-top: 34px;
+  position: relative;
+}
+.singleProdDetailsContainer .singleProdLeftCarousel .carousel a:first-of-type {
+  background-color: red;
+}
+.singleProdDetailsContainer .singleProdLeftCarousel #carouselWrapper {
+  width: 100% !important;
+  height: calc(100% - 62px) !important;
+  position: relative;
+  top: 50%;
+  transform: translateY(calc(-50% - 2px));
+  z-index: 2;
+}
+.singleProdDetailsContainer .singleProdLeftCarousel #carouselWrapper .pictureFrame {
+  margin: auto;
+}
+.singleProdDetailsContainer .singleProdLeftCarousel .singleProdCarBorder {
+  border: 3px solid #ff7f00 !important;
+}
+.singleProdDetailsContainer .singleProductImage {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdRightPrice {
+  font-weight: bold;
+  font-size: 25px;
+  color: #ff7f00;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdRightOrangeColor {
+  color: #ff7f00;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdDeliverPrice {
+  border-top: 1px solid #ff7f00;
+  border-bottom: 1px solid #ff7f00;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdRightColorWrap {
+  padding-bottom: 10px;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdRightColorWrap .singleProdRightColor {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap {
+  display: flex;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap .singleProdCartButton {
+  flex: 1;
+  padding: 0;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap .singleProdCartButton .singleProdCartText {
+  flex: 1;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap .singleProdCartButton .singleProdCartIconWrap {
+  background-color: #ff5500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 100%;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap .singleProdFavoriteButton {
+  margin-left: 20px;
+  background-color: #ff5500;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleProdDetailsContainer .singleProductRightDetails .singleProdButtonsWrap > button {
+  background-color: #ff7f00;
+  padding: 15px 0;
+  border: none;
+  border-radius: 0;
+  color: white;
+}
+.singleProdDetailsContainer .singleProductRightDetails > p {
+  margin: 0;
+  padding: 10px 0;
+}
+.singleProdDetailsContainer .singleProdCarPrev,
+.singleProdDetailsContainer .singleProdCarNext {
+  left: 50%;
+  position: absolute;
+  height: 31px;
+  width: 50px;
+  transform: translateX(-50%);
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+.singleProdDetailsContainer .singleProdCarPrev .singleProdCarArrow,
+.singleProdDetailsContainer .singleProdCarNext .singleProdCarArrow {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 2px solid #ff7f00;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -22%) rotate(45deg);
+}
+.singleProdDetailsContainer .singleProdCarPrev .singleProdCarNextArrow,
+.singleProdDetailsContainer .singleProdCarNext .singleProdCarNextArrow {
+  transform: translate(-50%, -79%) rotate(225deg);
+}
+.singleProdDetailsContainer .singleProdCarPrev .singleProdCarPrevArrow,
+.singleProdDetailsContainer .singleProdCarNext .singleProdCarPrevArrow {
+  z-index: 3;
+}
+.singleProdDetailsContainer :focus {
+  outline: none;
+}
+.singleProdDetailsContainer .singleProdCarPrev:hover,
+.singleProdDetailsContainer .singleProdCarNext:hover {
+  background-color: white;
+}
+.singleProdDetailsContainer .buttons {
+  margin: 5px 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  margin: 0;
+  text-align: center;
+  left: 0;
+}
+.singleProdDetailsContainer #next {
+  bottom: 0;
+}
+.singleProdDetailsContainer button {
+  font-size: 14px;
+  display: inline;
+  padding: 3px 6px;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+}
+.singleProdDetailsContainer button:hover {
+  border: 2px solid #888;
+  background: #ffe;
+  cursor: pointer;
+}
+.singleProdDetailsContainer #carouselWrapper {
+  position: relative;
+  overflow: hidden;
+}
+.singleProdDetailsContainer #carousel {
+  position: absolute;
+  visibility: hidden;
+}
+
+.singleProdBottomDetailWrap .singleProdBottomButtonsWrap {
+  display: flex;
+  margin-bottom: 15px;
+}
+.singleProdBottomDetailWrap .singleProdBottomButtonsWrap .singleProdBotButtonBGColor {
+  background-color: #ff7f00;
+  color: white;
+}
+.singleProdBottomDetailWrap .singleProdBottomButtonsWrap > button {
+  padding: 10px 35px;
+  border: none;
+  border-radius: 0;
+  margin-right: 15px;
+  font-weight: bold;
+  box-shadow: 0 0 6px black;
+}
+.singleProdBottomDetailWrap .singleProdBottomButtonsWrap > button:hover,
+.singleProdBottomDetailWrap .singleProdBottomButtonsWrap > button:focus {
+  border: none;
+  outline: none;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap {
+  box-shadow: 0 0 6px black;
+  margin-bottom: 15px;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap .singleProdBottomDetailInnerWrap {
+  padding: 10px 30px;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap .singleProdBottomDetailInnerWrap .singleProdBotDetail {
+  padding: 10px 0;
+  border-bottom: 1px solid #ff7f00;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap .singleProdBottomDetailInnerWrap .singleProdBotDetail .singleProdBotDetailTitle {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap .singleProdBottomDetailInnerWrap div:last-child {
+  border-bottom: none;
+}
+.singleProdBottomDetailWrap .singleProdBottomDetailWrap .singleProdBottomDetailDescWrap {
+  text-indent: 25px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  padding: 10px 30px;
+}
+
+.sliderDisabledArrow {
+  border-color: #c5c5c5;
+}
+
+.singleProductSliderArrow {
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 3px solid #ff7f00;
+  border-right: 3px solid #ff7f00;
+  left: 50%;
+}
+
+.verticalSliderWrapper {
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+.verticalSliderWrapper .verticalSlider {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 400ms ease-in-out;
+}
+.verticalSliderWrapper .verticalSlider .verticalSliderSlide {
+  height: calc(25% - 5px);
+  width: 100%;
+  padding-bottom: 5px;
+  box-sizing: initial;
+}
+.verticalSliderWrapper .verticalSlider .verticalSliderSlide .verticalSliderSlideInWrap {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #ff7f00;
+}
+.verticalSliderWrapper .verticalSlider .verticalSliderSlide .verticalSliderSlideInWrap .verticalSliderSlideImage {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.verticalSliderWrapper .verticalSlider .verticalSliderSlide .verticalSliderSelectedBorder {
+  border-width: 3px;
+}
+
+.verticalSliderNext {
+  position: absolute;
+  top: -34px;
+  width: calc(100% - 30px);
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.verticalSliderPrevious {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  bottom: 71px;
+}
+
+.verticalSliderArrowNext {
+  transform: translateX(-50%) rotate(-45deg);
+  top: 5px;
+}
+
+.verticalSliderArrowPrevious {
+  transform: translateX(-50%) rotate(135deg);
+  top: 0px;
+}
+
+.topTranslate {
+  transform: translateY(25%);
+}
+
+.sliderDisabledArrow {
+  border-color: #c5c5c5;
+}
+
+.singleProductSimilarTitle {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 110px;
+  line-height: 110px;
+  margin-bottom: 0;
+}
+
+.singleProductSimilarTitle:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #ff7f00;
+  margin: auto;
+  margin-left: 10px;
+}
+
+.singleProductSimilarPBottom55px {
+  padding-bottom: 55px;
+}
+
+.singleProductSimilarBGGray {
+  background-color: #e5e5e5;
+}
+
+.singleProdSimilarContainer {
+  display: flex;
+  padding: 0;
+  width: 90%;
+  position: relative;
+}
+.singleProdSimilarContainer .similarSlider {
+  display: inline-block;
+  height: 100%;
+  width: 40px;
+  position: absolute;
+}
+.singleProdSimilarContainer .similarSliderPrevious {
+  left: -56px;
+}
+.singleProdSimilarContainer .similarSliderPrevious .similarSliderArrowPrevious {
+  top: 50%;
+  transform: translateY(-50%) rotate(-135deg);
+  left: 5px;
+}
+.singleProdSimilarContainer .similarSliderNext {
+  right: -56px;
+}
+.singleProdSimilarContainer .similarSliderNext .similarSliderArrowNext {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  left: 10px;
+}
+
+.singleProdContainerHidden {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.singleProdContainerHidden .singleProdSimilarFullWidth {
+  display: flex;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  transition: transform 400ms ease-in-out;
+}
+
+.singleProductCol {
+  width: 20%;
+  max-width: 20%;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 20%;
+}
+.singleProductCol .card-body {
+  padding: 0 15px;
+  min-height: 100%;
+}
+.singleProductCol .card-body .card-body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.singleProductCol .card-body .card-body .card-title {
+  padding: 15px 0;
+  margin-bottom: 0;
+  border-top: 1px solid #ff7f00;
+  flex: 1 1;
+}
+.singleProductCol .card-body .card-body .card-text {
+  padding: 15px 0;
+  margin-bottom: 0;
+}
+.singleProductCol .card-body .card-body .singleProductCardButtonWrap {
+  background-color: #ff7f00;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.singleProductCol .card-body .card-body .singleProductCardButtonWrap .singleProductCardButton {
+  flex: 1;
+}
+.singleProductCol .card-body .card-body .singleProductCardButtonWrap .singleProductCardButtonIconWrap {
+  background-color: #ff5500;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.singleProductCol .card-body .card-body .singleProductCardButtonWrap .singleProductCardButtonIconWrap .singleProductCardButtonIcon {
+  display: inline-block;
+  width: 70%;
+  object-fit: contain;
+}
+.singleProductCol .card-body .card-body .singleProductCardButtonWrap:focus {
+  outline: none;
+  border: none;
+}
+.singleProductCol .card-body .singleProductCardFavWrap {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.singleProductCol .card-body .singleProductCardFavWrap .singleProductCardFavorites {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.singleProductCol .singleProductImageWrap {
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 15px 0;
+}

@@ -1,0 +1,68 @@
+$whiteBGColor: white;
+$orangeTheme: #ff7f00;
+$whiteTextTheme: white;
+$whiteBGTheme: white;
+$mainImageDarkOverlay: rgba(0, 0, 0, 0.6);
+$cardShadowColor: black;
+$cardDetailsArrowColor: white;
+$buttonBGTransparent: rgba(0, 0, 0, 0);
+$productAddCartButton: #ff5500;
+
+@mixin below575px {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin below530px {
+  @media (max-width: 530px) {
+    @content;
+  }
+}
+
+.pageSectionRegister {
+  min-height: 515px;
+}
+
+.registerInput {
+  border: 1px solid $orangeTheme;
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.registerSubmitWrap {
+  margin-top: 30px;
+
+  .registerSubmitInnerWrap {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+
+    .registerSubmitButton {
+      width: 100%;
+      height: 100%;
+      padding: 10px 0;
+    }
+  }
+}
+
+.registerBoxContainer {
+  margin: 0;
+
+  .registerBoxContainerShadow {
+    padding-bottom: 45px;
+    @include below575px() {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.titleWithOrangeLine {
+  height: 100px;
+  line-height: 100px;
+  @include below575px() {
+    height: 80px;
+    line-height: 80px;
+  }
+}
